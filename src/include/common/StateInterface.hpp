@@ -6,20 +6,20 @@
 
 namespace SMART_FINGER_SDK
 {
-  class Connection
+  class StateInterface
   {
   private:
     /* data */
   public:
-    Connection(/* args */);
-    ~Connection();
+    StateInterface(/* args */);
+    ~StateInterface();
   };
 
-  Connection::Connection(/* args */)
+  StateInterface::StateInterface(/* args */)
   {
   }
 
-  Connection::~Connection()
+  StateInterface::~StateInterface()
   {
   }
 
