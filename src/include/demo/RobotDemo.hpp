@@ -1,17 +1,16 @@
 /*
   状态基类
 */
-#ifndef _SMART_FINGER_ROBOT_DEMO_H_
-#define _SMART_FINGER_ROBOT_DEMO_H_
+#ifndef RobotDemo
+#define RobotDemo
 
 #include "../common/Robot.hpp"
-#include "./DataStructDemo.hpp"
 #include "../common/CommandInterface.hpp"
 #include "../common/StateInterface.hpp"
 #include "../common/CommunicatorInterface.hpp"
 namespace SMART_FINGER_SDK
 {
-  class RobotDemo
+  class RobotDemo : public Robot
   {
   private:
     CommunicatorInterface *communicator;
@@ -19,8 +18,11 @@ namespace SMART_FINGER_SDK
     CommandInterface *command;
 
   public:
-    RobotDemo(/* args */){};
-    ~RobotDemo(){};
+    RobotDemo();
+    ~RobotDemo();
+    virtual CommunicatorInterface GetCommunicator() const { return *communicator; }
+    virtual StateInterface GetState() const { return *state; }
+    virtual CommandInterface GetCommand() const { return *command; }
   };
 }
 #endif

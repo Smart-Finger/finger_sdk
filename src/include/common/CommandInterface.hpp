@@ -1,8 +1,8 @@
 /*
   状态基类
 */
-#ifndef _SMART_FINGER_COMMAND_H_
-#define _SMART_FINGER_COMMAND_H_
+#ifndef CommandInterface
+#define CommandInterface
 
 namespace SMART_FINGER_SDK
 {
@@ -11,17 +11,10 @@ namespace SMART_FINGER_SDK
   private:
     /* data */
   public:
-    CommandInterface(/* args */);
-    ~CommandInterface();
+    CommandInterface(void) {}
+    ~CommandInterface() {}
+    virtual int GetSize(void) const = 0;
   };
-
-  CommandInterface::CommandInterface(/* args */)
-  {
-  }
-
-  CommandInterface::~CommandInterface()
-  {
-  }
 
 }
 
