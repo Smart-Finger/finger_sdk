@@ -15,8 +15,8 @@ namespace SMART_FINGER_SDK
   public:
     CommunicatorInterface(){};
     virtual ~CommunicatorInterface(){};
-    virtual int Send(Command command) = 0;
-    virtual int Recv(State state) = 0;
+    virtual int Send() = 0;
+    virtual int Recv() = 0;
   };
 }
 

@@ -6,23 +6,21 @@
 
 #include "../common/Robot.hpp"
 #include "./DataStructDemo.hpp"
-
-class RobotDemo : Robot
+#include "../common/CommandInterface.hpp"
+#include "../common/StateInterface.hpp"
+#include "../common/CommunicatorInterface.hpp"
+namespace SMART_FINGER_SDK
 {
-private:
-  LowLevelStateDemo lowlevel;
+  class RobotDemo
+  {
+  private:
+    CommunicatorInterface *communicator;
+    StateInterface *state;
+    CommandInterface *command;
 
-public:
-  RobotDemo(/* args */);
-  ~RobotDemo();
-};
-
-RobotDemo::RobotDemo(/* args */)
-{
+  public:
+    RobotDemo(/* args */){};
+    ~RobotDemo(){};
+  };
 }
-
-RobotDemo::~RobotDemo()
-{
-}
-
 #endif
