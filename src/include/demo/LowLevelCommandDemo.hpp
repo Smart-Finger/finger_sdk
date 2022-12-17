@@ -1,5 +1,5 @@
-#ifndef LowLevelCommandDemo
-#define LowLevelCommandDemo
+#ifndef LOWLEVWLCOMMANDDEMO_H
+#define LOWLEVWLCOMMANDDEMO_H
 #include "../common/CommandInterface.hpp"
 namespace SMART_FINGER_SDK
 {
@@ -16,21 +16,12 @@ namespace SMART_FINGER_SDK
     LowLevelCommandDemoStruct command_struct;
 
   public:
-    LowLevelCommandDemo(/* args */);
-    ~LowLevelCommandDemo();
+    LowLevelCommandDemo(/* args */){};
+    ~LowLevelCommandDemo(){};
     int SetX(int x);
     int SetY(int y);
     int SetSpeed(double speed[3]);
-    inline virtual int GetSize(){return sizeof(command_struct)};
+    virtual int GetSize(void) const { return sizeof(command_struct); }
   };
-
-  LowLevelCommandDemo::LowLevelCommandDemo(/* args */)
-  {
-    thie->command_struct = {0};
-  }
-
-  LowLevelCommandDemo::~LowLevelCommandDemo()
-  {
-  }
 }
 #endif

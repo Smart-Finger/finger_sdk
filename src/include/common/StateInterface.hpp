@@ -1,8 +1,8 @@
 /*
   状态基类
 */
-#ifndef StateInterface
-#define StateInterface
+#ifndef STATE_INTERFACE_H
+#define STATE_INTERFACE_H
 
 namespace SMART_FINGER_SDK
 {
@@ -11,17 +11,10 @@ namespace SMART_FINGER_SDK
   private:
     /* data */
   public:
-    StateInterface(/* args */);
-    ~StateInterface();
+    StateInterface(/* args */) {}
+    ~StateInterface() {}
+    inline virtual int GetSize(void) const = 0;
   };
-
-  StateInterface::StateInterface(/* args */)
-  {
-  }
-
-  StateInterface::~StateInterface()
-  {
-  }
 
 }
 

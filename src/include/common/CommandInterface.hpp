@@ -1,15 +1,13 @@
 /*
   状态基类
 */
-#ifndef CommandInterface
-#define CommandInterface
+#ifndef COMMANDINTERFACE_HPP
+#define COMMANDINTERFACE_HPP
 
 namespace SMART_FINGER_SDK
 {
   class CommandInterface
   {
-  private:
-    /* data */
   public:
     CommandInterface(void) {}
     ~CommandInterface() {}
